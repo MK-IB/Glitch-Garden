@@ -3,14 +3,17 @@ using UnityEngine;
 
 public class LivesDisplay : MonoBehaviour
 {
-    [SerializeField] int lives = 5;
-    int damage = 1;
+    [SerializeField] float baseLives = 3;
+    [SerializeField] int damage = 1;
+    float lives;
     Text livesText;
 
     void Start()
     {
+        lives = baseLives - PlayerPrefsController.GetDifficulty();
         livesText = GetComponent<Text>();
         UpdateDisplay();
+        Debug.Log("Difficulty = " + PlayerPrefsController.GetDifficulty());
     }
 
     private void UpdateDisplay()

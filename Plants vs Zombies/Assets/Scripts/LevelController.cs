@@ -20,7 +20,7 @@ public class LevelController : MonoBehaviour
    }
    public void AttackerKilled()
    {
-       Debug.Log("Attackers = " + numberOfAttackers);
+       //Debug.Log("Attackers = " + numberOfAttackers);
        numberOfAttackers--;
        if(numberOfAttackers <= 0 && levelTimerFinished)
        {
@@ -44,7 +44,7 @@ public class LevelController : MonoBehaviour
    public void LevelTimerFinished()
    {
        levelTimerFinished = true;
-       Debug.Log("LevelTimer Finished");
+      // Debug.Log("LevelTimer Finished");
        StopSpawners();
    }
 
