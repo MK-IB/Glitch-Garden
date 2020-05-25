@@ -6,6 +6,7 @@ public class LevelController : MonoBehaviour
     [SerializeField] GameObject winLabel;
     [SerializeField] GameObject loseLabel;
    int numberOfAttackers = 0;
+   int killedByDefender;
    bool levelTimerFinished = false;
    [SerializeField] float waitToLoad = 4f;
 
@@ -18,6 +19,11 @@ public class LevelController : MonoBehaviour
    {
        numberOfAttackers++;
    }
+
+   /*public void KilledByDefender()
+   {
+       killedByDefender++;
+   } */
    public void AttackerKilled()
    {
        //Debug.Log("Attackers = " + numberOfAttackers);
@@ -27,7 +33,10 @@ public class LevelController : MonoBehaviour
           StartCoroutine(HandleWinCondition());
        }
    }
-
+    public void AttackerKilledByDefender()
+    {
+        FindObjectOfType<StarDisplay>().AddStars(10);
+    }
    IEnumerator HandleWinCondition()
    {
        winLabel.SetActive(true);

@@ -189,7 +189,7 @@ GameObject:
   - component: {fileID: 1869524390720979992}
   - component: {fileID: 1869524390720979993}
   m_Layer: 5
-  m_Name: Image
+  m_Name: BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -211,8 +211,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 18.200012, y: -41.624973}
-  m_SizeDelta: {x: 1084.4, y: 285.65}
+  m_AnchoredPosition: {x: 24.600006, y: -41.624973}
+  m_SizeDelta: {x: 1626, y: 522.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1869524390720979992
 CanvasRenderer:
@@ -235,13 +235,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4009434, g: 1, b: 0.45892972, a: 0.23529412}
+  m_Color: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 0.5882353}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4

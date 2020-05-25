@@ -90,7 +90,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24f015277b7afc847a90db427ba0e070, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lives: 10
+  baseLives: 6
+  damage: 1
 --- !u!1 &380666337
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,7 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39374f768ba4a7a478f47aaa5da98d70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stars: 1000
+  stars: 250
 --- !u!1 &661983266179102992
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,7 +480,7 @@ GameObject:
   - component: {fileID: 4122676741262210597}
   - component: {fileID: 4122676741262210596}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Main Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -935,4 +936,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10eee0d55c308e0489f3243fb97b8614, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelTime: 3
+  levelTime: 6

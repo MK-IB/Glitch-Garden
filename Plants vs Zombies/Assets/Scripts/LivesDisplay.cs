@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class LivesDisplay : MonoBehaviour
 {
-    [SerializeField] float baseLives = 3;
+    [SerializeField] float baseLives = 6;
     [SerializeField] int damage = 1;
     float lives;
     Text livesText;

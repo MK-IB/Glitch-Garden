@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 392160119408387333}
-  - component: {fileID: 4731708057310488568}
+  - component: {fileID: 71385606}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4731708057310488568
+--- !u!114 &71385606
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,6 +40,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3585901487315627897}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff722b9d981614e42946687e5845d936, type: 3}
+  m_Script: {fileID: 11500000, guid: fdb11497892c4654aae53c204e9c43a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minSpawnDelay: 1
+  maxSpawnDelay: 6
+  attackerPrefabArray:
+  - {fileID: 5707582269437612422, guid: 0fae64cb14c2b2949a322a99b75c76d7, type: 3}
