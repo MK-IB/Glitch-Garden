@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 6430184919699475092}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.347217, y: 3.2921145, z: -2.921875}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.83455, y: 0.83455, z: 0.83455}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -47,6 +47,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winLabel: {fileID: 0}
   loseLabel: {fileID: 0}
+  pauseMenu: {fileID: 0}
+  loseClip: {fileID: 8300000, guid: d4bf446bb8505034881cba025b982645, type: 3}
+  winClip: {fileID: 8300000, guid: a5fe287a9fd66cf4796fb1cdcd83820b, type: 3}
   waitToLoad: 4
 --- !u!114 &482808057
 MonoBehaviour:
@@ -71,11 +74,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a5fe287a9fd66cf4796fb1cdcd83820b, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: 089f8fa613b301f4ea2f59e17471df09, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.07
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

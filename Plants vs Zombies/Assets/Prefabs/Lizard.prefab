@@ -180,6 +180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 150
   deathVFX: {fileID: 1906222994913036, guid: 740c2b3187d56c341b8cb78e8aa925c5, type: 3}
+  deathSFX: {fileID: 8300000, guid: ed507bab9a59c9c46aec8ef2180ea143, type: 3}
 --- !u!114 &7382564787055622042
 MonoBehaviour:
   m_ObjectHideFlags: 0
