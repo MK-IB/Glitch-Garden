@@ -18,7 +18,7 @@ public class DefenderButton : MonoBehaviour
         }
         else
         {
-            costText.text = defenderPrefab.GetStarCost().ToString();
+            costText.text = "$ " + defenderPrefab.GetStarCost().ToString();
         }
     }
     [SerializeField] Defender defenderPrefab;
