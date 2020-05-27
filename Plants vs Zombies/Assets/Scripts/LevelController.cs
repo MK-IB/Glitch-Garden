@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class LevelController : MonoBehaviour
@@ -59,13 +60,15 @@ public class LevelController : MonoBehaviour
        AudioSource.PlayClipAtPoint(winClip, transform.position);
        yield return new WaitForSeconds(waitToLoad);
        FindObjectOfType<LevelLoader>().LoadNextScene();
+       PlayerPrefsController.SetLevelNumber(SceneManager.GetActiveScene().buildIndex);
+       Debug.Log("INDEX = " + SceneManager.GetActiveScene().buildIndex);
    }
 
    public void HandleLoseCondition()
    {
        loseLabel.SetActive(true);
-       Time.timeScale = 0;
        AudioSource.PlayClipAtPoint(loseClip, transform.position);
+       Time.timeScale = 0;
    }
    public void LevelTimerFinished()
    {

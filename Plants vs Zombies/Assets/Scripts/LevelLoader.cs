@@ -15,6 +15,13 @@ public class LevelLoader : MonoBehaviour
         }
     }
 
+    public void LoadSavedLevel()
+    {
+        int levelToLoad = PlayerPrefsController.GetLevelNumber();
+        //SceneManager.LoadScene()
+        if(levelToLoad == 0) Debug.Log("You should play first");
+        Debug.Log("Scene to load- INDEX ="  + levelToLoad);
+    }
     IEnumerator WaitForTime()
     {
         yield return new WaitForSeconds(timeToWait);

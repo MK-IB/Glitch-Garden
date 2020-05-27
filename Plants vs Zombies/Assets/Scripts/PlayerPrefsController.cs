@@ -11,6 +11,8 @@ public class PlayerPrefsController : MonoBehaviour
     const float MIN_DIFFICULTY = 0f;
     const float MAX_DIFFICULTY = 2f;
 
+    const string SAVED_SCENE_INDEX = "SavedSceneNumber";
+
     public static void SetMasterVolume(float volume)
     {
         if(volume >= MIN_VOLUME && volume <= MAX_VOLUME)
@@ -24,6 +26,16 @@ public class PlayerPrefsController : MonoBehaviour
     }
 }
 
+    public static void SetLevelNumber(int levelNum)
+    {
+        PlayerPrefs.SetInt(SAVED_SCENE_INDEX, levelNum);
+    }
+
+    public static int GetLevelNumber()
+    {
+        return PlayerPrefs.GetInt(SAVED_SCENE_INDEX);
+    }
+    
     public static float GetMasterVolume()
     {
         return PlayerPrefs.GetFloat(MASTER_VOLUME_KEY);
