@@ -7,6 +7,7 @@ public class LevelController : MonoBehaviour
     [SerializeField] GameObject winLabel;
     [SerializeField] GameObject loseLabel;
     [SerializeField] GameObject pauseMenu;
+    [SerializeField] GameObject tipsWindow;
     [SerializeField] AudioClip loseClip;
     [SerializeField] AudioClip winClip;
    int numberOfAttackers = 0;
@@ -19,6 +20,7 @@ public class LevelController : MonoBehaviour
        winLabel.SetActive(false);
        loseLabel.SetActive(false);
        pauseMenu.SetActive(false);
+       tipsWindow.SetActive(false);
    }
    public void AttackerSpawned()
    {
@@ -47,21 +49,38 @@ public class LevelController : MonoBehaviour
     {
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
+        GetComponent<AudioSource>().Stop();
     }
 
     public void ResumeTheGame()
     {
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
+        GetComponent<AudioSource>().Play();
     }
+
+    public void ShowTipsWindow()
+    {
+        tipsWindow.SetActive(true);
+        Time.timeScale = 0;
+        GetComponent<AudioSource>().Stop();
+    }
+
+    public void HideTipsWindow()
+    {
+        tipsWindow.SetActive(false);
+        Time.timeScale = 1;
+        GetComponent<AudioSource>().Play();
+    }
+
    IEnumerator HandleWinCondition()
    {
        winLabel.SetActive(true);
+       GetComponent<AudioSource>().Stop();
        AudioSource.PlayClipAtPoint(winClip, transform.position);
        yield return new WaitForSeconds(waitToLoad);
        FindObjectOfType<LevelLoader>().LoadNextScene();
        PlayerPrefsController.SetLevelNumber(SceneManager.GetActiveScene().buildIndex);
-       Debug.Log("INDEX = " + SceneManager.GetActiveScene().buildIndex);
    }
 
    public void HandleLoseCondition()

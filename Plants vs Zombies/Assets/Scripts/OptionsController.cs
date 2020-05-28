@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using UnityEngine.SceneManagement;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class OptionsController : MonoBehaviour
@@ -7,13 +8,13 @@ public class OptionsController : MonoBehaviour
     [SerializeField] float defaultVolume = 0.5f;
     [SerializeField] Slider difficultySlider;
     [SerializeField] float defaultDifficulty = 0.5f;
-
+    
     void Start()
     {
         volumeSlider.value = PlayerPrefsController.GetMasterVolume();    
         difficultySlider.value = PlayerPrefsController.GetDifficulty();
     }
-
+    
     void Update()
     {
         var musicPlayer = FindObjectOfType<MusicPlayer>();
@@ -31,7 +32,7 @@ public class OptionsController : MonoBehaviour
     {
         PlayerPrefsController.SetMasterVolume(volumeSlider.value);
         PlayerPrefsController.SetDifficulty(difficultySlider.value);
-        FindObjectOfType<LevelLoader>().LoadMainMenu();
+        SceneManager.LoadScene("Options Screen");
     }
 
     public void SetDefaults()

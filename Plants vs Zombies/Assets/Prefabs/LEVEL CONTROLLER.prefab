@@ -48,6 +48,7 @@ MonoBehaviour:
   winLabel: {fileID: 0}
   loseLabel: {fileID: 0}
   pauseMenu: {fileID: 0}
+  tipsWindow: {fileID: 0}
   loseClip: {fileID: 8300000, guid: d4bf446bb8505034881cba025b982645, type: 3}
   winClip: {fileID: 8300000, guid: a5fe287a9fd66cf4796fb1cdcd83820b, type: 3}
   waitToLoad: 4
@@ -64,6 +65,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToWait: 4
+  tooltip: {fileID: 0}
 --- !u!82 &2904279599266266909
 AudioSource:
   m_ObjectHideFlags: 0

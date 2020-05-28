@@ -1,11 +1,15 @@
 ﻿using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class LevelLoader : MonoBehaviour
 {
    int currentSceneIndex;
    [SerializeField] int timeToWait = 4;
+   [SerializeField] Image tooltip;
+   float toolTipStayTime = 3;
+   
     void Start()
     {
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -13,14 +17,37 @@ public class LevelLoader : MonoBehaviour
         {
             StartCoroutine(WaitForTime());
         }
-    }
+        if(tooltip){
+            tooltip.enabled = false;
+        }
 
+    }
+    public void LoadNewGame()
+    {
+        SceneManager.LoadScene("Level 1");
+        PlayerPrefsController.SetLevelNumber(0);
+    }
     public void LoadSavedLevel()
     {
-        int levelToLoad = PlayerPrefsController.GetLevelNumber();
-        //SceneManager.LoadScene()
-        if(levelToLoad == 0) Debug.Log("You should play first");
-        Debug.Log("Scene to load- INDEX ="  + levelToLoad);
+        int levelToLoad = PlayerPrefsController.GetLevelNumber() + 1;
+
+        if(levelToLoad < 3)
+        {
+            if(tooltip.enabled == false)
+            {
+                tooltip.enabled = true;
+                StartCoroutine(HideTooltip());
+            }
+               
+        }
+        else
+        SceneManager.LoadScene(levelToLoad);
+    }
+
+    IEnumerator HideTooltip()
+    {
+        yield return new WaitForSeconds(toolTipStayTime);
+        tooltip.enabled = false;
     }
     IEnumerator WaitForTime()
     {
@@ -36,7 +63,7 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadOptionsScreen ()
     {
-        SceneManager.LoadScene("Options Screen");  
+        SceneManager.LoadScene("Options Screen");
     }
 
     public void RestartScene()
@@ -54,8 +81,4 @@ public class LevelLoader : MonoBehaviour
     {
         Application.Quit();
     }
-  public void LoadYouLose()
-  {
-      SceneManager.LoadScene("Lose Screen");
-  }
 }
