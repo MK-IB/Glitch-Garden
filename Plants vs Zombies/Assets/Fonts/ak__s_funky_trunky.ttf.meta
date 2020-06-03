@@ -1,22 +1,3 @@
-fileFormatVersion: 2
-guid: 91aff980bd69f324ca96ae6863bdfe5a
-TrueTypeFontImporter:
-  externalObjects: {}
-  serializedVersion: 4
-  fontSize: 16
-  forceTextureCase: -2
-  characterSpacing: 0
-  characterPadding: 1
-  includeFontData: 1
-  fontName: ak__s_funky_trunky
-  fontNames:
-  - ak__s_funky_trunky
-  fallbackFontReferences: []
-  customCharacters: 
-  fontRenderingMode: 0
-  ascentCalculationMode: 1
-  useLegacyBoundsCalculation: 0
-  shouldRoundAdvanceValue: 1
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:dde01c2e78f31aa868d7d119596c384ef02a8d760632d44642cdf73e9c099dfe
+size 536

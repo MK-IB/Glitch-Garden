@@ -1,22 +1,3 @@
-fileFormatVersion: 2
-guid: 7b43e18428cfcc7468bbe3df850ada36
-TrueTypeFontImporter:
-  externalObjects: {}
-  serializedVersion: 4
-  fontSize: 16
-  forceTextureCase: -2
-  characterSpacing: 0
-  characterPadding: 1
-  includeFontData: 1
-  fontName: DK Garden Bed
-  fontNames:
-  - DK Garden Bed
-  fallbackFontReferences: []
-  customCharacters: 
-  fontRenderingMode: 0
-  ascentCalculationMode: 1
-  useLegacyBoundsCalculation: 0
-  shouldRoundAdvanceValue: 1
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:25d987e0c76f80bb51a7662d8afb17bb4a314193d528c744f2191efa16c45f15
+size 526

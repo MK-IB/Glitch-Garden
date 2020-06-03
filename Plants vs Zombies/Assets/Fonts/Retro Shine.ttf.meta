@@ -1,22 +1,3 @@
-fileFormatVersion: 2
-guid: 37dd2e3a17a4cb446b449297bcab877c
-TrueTypeFontImporter:
-  externalObjects: {}
-  serializedVersion: 4
-  fontSize: 16
-  forceTextureCase: -2
-  characterSpacing: 0
-  characterPadding: 1
-  includeFontData: 1
-  fontName: Retro Shine
-  fontNames:
-  - Retro Shine
-  fallbackFontReferences: []
-  customCharacters: 
-  fontRenderingMode: 0
-  ascentCalculationMode: 1
-  useLegacyBoundsCalculation: 0
-  shouldRoundAdvanceValue: 1
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:ae70e905d50e472d294fb2e08404d41d242afc5566870394f2361c3651873834
+size 522
