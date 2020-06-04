@@ -30,9 +30,10 @@ public class Health : MonoBehaviour
 
     public void DamageByDragon()
     {
+        Debug.Log("Damage() called");
+        Destroy(gameObject);
         if(!deathVFXFire) {return;}
         GameObject fireEffect = Instantiate(deathVFXFire, transform.position, transform.rotation);
-        Destroy(gameObject);
         Destroy(fireEffect, 1f);
     }
 }

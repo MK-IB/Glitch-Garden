@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class DefenderButton : MonoBehaviour
 {
-
+    [SerializeField] Defender defenderPrefab;
+    
     private void Start()
     {
         LabelButtonWithCost();
@@ -21,7 +22,7 @@ public class DefenderButton : MonoBehaviour
             costText.text = "$ " + defenderPrefab.GetStarCost().ToString();
         }
     }
-    [SerializeField] Defender defenderPrefab;
+    
     private void OnMouseDown()
     {
         var buttons = FindObjectsOfType<DefenderButton>();
