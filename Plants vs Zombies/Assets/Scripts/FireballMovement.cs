@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class FireballMovement : MonoBehaviour
 {
@@ -8,5 +6,20 @@ public class FireballMovement : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector2.up * speed *Time.deltaTime);
+    }
+
+    private void OnTriggerEnter2D(Collider2D otherCollider)
+    {
+        Debug.Log("Collision occured");
+        var defender = otherCollider.GetComponent<Defender>();
+        var projectile = otherCollider.GetComponent<Projectile>();
+        if(defender)
+        {
+            FindObjectOfType<Health>().DamageByDragon();
+        }
+        if (projectile)
+        {
+            FindObjectOfType<Projectile>().DamageByDragon();
+        }
     }
 }

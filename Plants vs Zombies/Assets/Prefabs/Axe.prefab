@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   damage: 100
+  deathVFXFire: {fileID: 100004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
 --- !u!95 &967181994726729055
 Animator:
   serializedVersion: 3

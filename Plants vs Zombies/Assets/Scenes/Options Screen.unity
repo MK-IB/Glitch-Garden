@@ -2234,7 +2234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volumeSlider: {fileID: 1440627455}
   defaultVolume: 0.7
-  difficultySlider: {fileID: 0}
+  difficultySlider: {fileID: 1684369403}
   defaultDifficulty: 0.5
 --- !u!4 &2032752513
 Transform:
