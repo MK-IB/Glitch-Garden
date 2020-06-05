@@ -9,7 +9,6 @@ public class DefenderButton : MonoBehaviour
     {
         LabelButtonWithCost();
     }
-
     private void LabelButtonWithCost()
     {
         Text costText = GetComponentInChildren<Text>();
