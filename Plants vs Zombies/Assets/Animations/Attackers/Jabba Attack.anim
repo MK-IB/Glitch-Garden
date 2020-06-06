@@ -86,6 +86,6 @@ AnimationClip:
     functionName: StrikeCurrentTarget
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 400
+    floatParameter: 300
     intParameter: 0
     messageOptions: 0
