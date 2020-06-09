@@ -21,7 +21,6 @@ public class Health : MonoBehaviour
     private void PlayDeathVFX()
     {
         if(!deathVFX) { return;}
-        //explosionPosition = new Vector2(transform.position.x - 0.5f, transform.position.y - 0.2f);
         GameObject deathVFXObj = Instantiate(deathVFX, transform.position, transform.rotation);
         Destroy(deathVFXObj, 1f);
         if(!deathSFX) {return;}
@@ -30,7 +29,6 @@ public class Health : MonoBehaviour
 
     public void DamageByDragon()
     {
-        Debug.Log("Damage() called");
         Destroy(gameObject);
         if(!deathVFXFire) {return;}
         GameObject fireEffect = Instantiate(deathVFXFire, transform.position, transform.rotation);

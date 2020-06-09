@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class FireballMovement : MonoBehaviour
 {
     [SerializeField] float speed = 5f;
+    GameObject scarecrow;
+    public bool scarecrowBurnt = false;
     void Update()
     {
         transform.Translate(Vector2.up * speed *Time.deltaTime);
@@ -10,16 +13,23 @@ public class FireballMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D otherCollider)
     {
-        Debug.Log("Collision occured");
-        var defender = otherCollider.GetComponent<Defender>();
-        var projectile = otherCollider.GetComponent<Projectile>();
-        if(defender)
+        if(otherCollider.tag == "defender")
         {
-            FindObjectOfType<Health>().DamageByDragon();
+            otherCollider.GetComponent<Health>().DamageByDragon();
+            //FindObjectOfType<Health>().DamageByDragon();
         }
-        if (projectile)
+        else if(otherCollider.tag == "scarecrow")
         {
-            FindObjectOfType<Projectile>().DamageByDragon();
+            //burn and make it black
+            scarecrow = GameObject.FindGameObjectWithTag("scarecrow");
+            scarecrow.GetComponent<SpriteRenderer>().color = Color.black;
+            scarecrowBurnt = true;
+            StartCoroutine(DestroyTheScareCrow());
         }
+    }
+    IEnumerator DestroyTheScareCrow()
+    {
+        yield return new WaitForSeconds(8);
+        Destroy(scarecrow);
     }
 }
