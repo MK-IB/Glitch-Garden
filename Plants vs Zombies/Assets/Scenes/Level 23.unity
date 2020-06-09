@@ -726,9 +726,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minSpawnDelay: 3
-  maxSpawnDelay: 6
+  maxSpawnDelay: 10
   attackerPrefabArray:
-  - {fileID: 2868262938860375355, guid: b5959996bd7911d4eb17c879d3b8619a, type: 3}
   - {fileID: 4786715240079699115, guid: d9f6f9db7fee8a34399babae6f780c10, type: 3}
 --- !u!1 &455726999
 GameObject:
@@ -952,7 +951,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minSpawnDelay: 10
-  maxSpawnDelay: 16
+  maxSpawnDelay: 20
   attackerPrefabArray:
   - {fileID: 5707582269437612422, guid: 0fae64cb14c2b2949a322a99b75c76d7, type: 3}
   - {fileID: 4786715240079699115, guid: d9f6f9db7fee8a34399babae6f780c10, type: 3}
@@ -1471,10 +1470,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minSpawnDelay: 3
-  maxSpawnDelay: 6
+  maxSpawnDelay: 9
   attackerPrefabArray:
   - {fileID: 2868262938860375355, guid: b5959996bd7911d4eb17c879d3b8619a, type: 3}
-  - {fileID: 4786715240079699115, guid: d9f6f9db7fee8a34399babae6f780c10, type: 3}
 --- !u!1 &1712667663
 GameObject:
   m_ObjectHideFlags: 0
@@ -1540,7 +1538,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.54, y: 1}
+    oldSize: {x: 0.675, y: 1.0666667}
     newSize: {x: 0.38, y: 0.62}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3206,7 +3204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39374f768ba4a7a478f47aaa5da98d70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stars: 2700
+  stars: 2900
 --- !u!224 &4122676742254948852
 RectTransform:
   m_ObjectHideFlags: 0
