@@ -1467,7 +1467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minSpawnDelay: 3
-  maxSpawnDelay: 9
+  maxSpawnDelay: 6
   attackerPrefabArray:
   - {fileID: 2868262938860375355, guid: b5959996bd7911d4eb17c879d3b8619a, type: 3}
 --- !u!1 &1712667663
@@ -1497,7 +1497,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1712667663}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.10709997, y: 0.15, z: 10.899228}
+  m_LocalPosition: {x: 0.10709997, y: 0.12, z: 10.899228}
   m_LocalScale: {x: 0.097352326, y: 1.0307891, z: 0.8761708}
   m_Children:
   - {fileID: 6867626557140362842}
@@ -1535,7 +1535,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.675, y: 1.0666667}
+    oldSize: {x: 0.57857144, y: 0.9142857}
     newSize: {x: 0.38, y: 0.62}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
