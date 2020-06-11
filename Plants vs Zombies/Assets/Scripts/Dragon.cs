@@ -19,7 +19,7 @@ public class Dragon : MonoBehaviour
             gameObject.GetComponent<Attacker>().SetMovementSpeed(0f);
         }
 
-        if(collider.tag == "scarecrow" && FindObjectOfType<FireballMovement>().scarecrowBurnt)
+        if(collider.tag == "scarecrow" && FindObjectOfType<FireballMovement>().GetScarecrowBurnBool() == true)
         {
            Destroy(gameObject);
            PlayDeathVFX();

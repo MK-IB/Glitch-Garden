@@ -97,6 +97,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  fireVFX: {fileID: 100004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
+  scarecrowBurnt: 0
 --- !u!61 &6520747264781956089
 BoxCollider2D:
   m_ObjectHideFlags: 0

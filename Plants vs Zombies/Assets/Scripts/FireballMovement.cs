@@ -4,6 +4,7 @@ using System.Collections;
 public class FireballMovement : MonoBehaviour
 {
     [SerializeField] float speed = 5f;
+    [SerializeField] GameObject fireVFX;
     GameObject scarecrow;
     public bool scarecrowBurnt = false;
     void Update()
@@ -21,11 +22,23 @@ public class FireballMovement : MonoBehaviour
         else if(otherCollider.tag == "scarecrow")
         {
             //burn and make it black
-            scarecrow = GameObject.FindGameObjectWithTag("scarecrow");
+            scarecrow = otherCollider.gameObject;
+            ScareCrowDeathEffect();
             scarecrow.GetComponent<SpriteRenderer>().color = Color.black;
             scarecrowBurnt = true;
             StartCoroutine(DestroyTheScareCrow());
         }
+    }
+
+    public bool GetScarecrowBurnBool()
+    {
+        return scarecrowBurnt;
+    }
+    private void ScareCrowDeathEffect()
+    {
+        if(!fireVFX) {return;}
+        GameObject fire = Instantiate(fireVFX, scarecrow.transform.position, scarecrow.transform.rotation);
+        Destroy(fire, 1f);
     }
     IEnumerator DestroyTheScareCrow()
     {

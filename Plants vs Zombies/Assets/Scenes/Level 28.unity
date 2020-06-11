@@ -2973,7 +2973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39374f768ba4a7a478f47aaa5da98d70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stars: 5300
+  stars: 5400
 --- !u!224 &4122676742254948852
 RectTransform:
   m_ObjectHideFlags: 0
