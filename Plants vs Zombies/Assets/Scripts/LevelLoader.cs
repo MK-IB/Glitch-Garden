@@ -1,19 +1,19 @@
-﻿using UnityEngine.SceneManagement;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
    int currentSceneIndex;
-   [SerializeField] int timeToWait = 4;
+   [SerializeField] int timeToWait = 3;
    [SerializeField] Image tooltip;
    float toolTipStayTime = 3;
    
     void Start()
     {
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        if(currentSceneIndex == 0)
+        if(currentSceneIndex == 0 || currentSceneIndex == 1)
         {
             StartCoroutine(WaitForTime());
         }

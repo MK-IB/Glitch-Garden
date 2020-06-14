@@ -3065,6 +3065,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tips Info Window
       objectReference: {fileID: 0}
+    - target: {fileID: 3702416428816917965, guid: 1f89f2766bf04054ba22c4d1970c7c72,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f89f2766bf04054ba22c4d1970c7c72, type: 3}
 --- !u!114 &3744718827001978146
