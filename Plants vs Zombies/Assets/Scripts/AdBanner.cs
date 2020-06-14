@@ -1,26 +1,18 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Advertisements;
 
 public class AdBanner : MonoBehaviour {
 
     public string gameId = "3628723";
-    public string placementId = "Options";
+    public string placementId = "video";
     public bool testMode = true;
 
     void Start()
     {
         Advertisement.Initialize(gameId, testMode);
-        StartCoroutine(ShowBannerWhenReady());
+        Advertisement.Show();
     }
 
-    IEnumerator ShowBannerWhenReady()
-    {
-        while(!Advertisement.IsReady (placementId))
-        {
-            yield return new WaitForSeconds(0.5f);
-        }
-        Advertisement.Banner.SetPosition(BannerPosition.BOTTOM_CENTER);
-        Advertisement.Banner.Show (placementId);
-    }
 }

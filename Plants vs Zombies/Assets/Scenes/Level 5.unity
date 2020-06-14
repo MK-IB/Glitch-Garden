@@ -3307,6 +3307,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1344617273, guid: 83a32135112dc94408548910e1f35c6b, type: 3}
+      propertyPath: m_Text
+      value: '* Place the trophies to collerct more coins (level 4 onwards)'
+      objectReference: {fileID: 0}
     - target: {fileID: 1386079632, guid: 83a32135112dc94408548910e1f35c6b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
