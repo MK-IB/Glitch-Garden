@@ -7,7 +7,6 @@ public class LevelController : MonoBehaviour
     [SerializeField] GameObject winLabel;
     [SerializeField] GameObject loseLabel;
     [SerializeField] GameObject pauseMenu;
-    [SerializeField] GameObject tipsWindow;
     [SerializeField] AudioClip loseClip;
     [SerializeField] AudioClip winClip;
    int numberOfAttackers = 0;
@@ -20,7 +19,6 @@ public class LevelController : MonoBehaviour
        winLabel.SetActive(false);
        loseLabel.SetActive(false);
        pauseMenu.SetActive(false);
-       tipsWindow.SetActive(false);
    }
    public void AttackerSpawned()
    {
@@ -56,20 +54,6 @@ public class LevelController : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
-        GetComponent<AudioSource>().Play();
-    }
-
-    public void ShowTipsWindow()
-    {
-        tipsWindow.SetActive(true);
-        Time.timeScale = 0;
-        GetComponent<AudioSource>().Stop();
-    }
-
-    public void HideTipsWindow()
-    {
-        tipsWindow.SetActive(false);
-        Time.timeScale = 1;
         GetComponent<AudioSource>().Play();
     }
 

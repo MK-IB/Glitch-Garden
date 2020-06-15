@@ -36,7 +36,7 @@ public class PlayerPrefsController : MonoBehaviour
     {
         return PlayerPrefs.GetInt(SAVED_SCENE_INDEX);
     }
-    
+
     public static float GetMasterVolume()
     {
         return PlayerPrefs.GetFloat(MASTER_VOLUME_KEY);

@@ -31,7 +31,7 @@ public class LevelLoader : MonoBehaviour
     {
         int levelToLoad = PlayerPrefsController.GetLevelNumber() + 1;
 
-        if(levelToLoad < 3)
+        if(levelToLoad < 4)
         {
             if(tooltip.enabled == false)
             {
@@ -53,6 +53,16 @@ public class LevelLoader : MonoBehaviour
     {
         yield return new WaitForSeconds(timeToWait);
         LoadNextScene();
+    }
+
+    public void ShowTipsWindow()
+    {
+        SceneManager.LoadScene("TipInfo Screen");
+    }
+
+    public void HideTipsWindow()
+    {   
+        SceneManager.LoadScene("Start Screen");
     }
 
     public void LoadMainMenu()
