@@ -13,7 +13,7 @@ public class LevelLoader : MonoBehaviour
     void Start()
     {
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        if(currentSceneIndex == 0 || currentSceneIndex == 1)
+        if(currentSceneIndex == 0)
         {
             StartCoroutine(WaitForTime());
         }
@@ -31,7 +31,7 @@ public class LevelLoader : MonoBehaviour
     {
         int levelToLoad = PlayerPrefsController.GetLevelNumber() + 1;
 
-        if(levelToLoad < 4)
+        if(levelToLoad < 3)
         {
             if(tooltip.enabled == false)
             {

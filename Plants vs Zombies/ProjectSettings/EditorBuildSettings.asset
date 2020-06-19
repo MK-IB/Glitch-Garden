@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MEGAME Splash.unity
-    guid: 2c66c6c3b9819ef46b78d16360296522
-  - enabled: 1
     path: Assets/Scenes/Splash Screen.unity
     guid: d6973515368355c42b09b27a9f53e16e
   - enabled: 1
